@@ -3,23 +3,33 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ListComponent } from './list/list.component';
-import { StatisticComponent } from './statistic/statistic.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule, MatNavList } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { StatisticsPageComponent } from './statistics/statistics-page/statistics-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ListComponent,
-    StatisticComponent
+    StatisticsPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatNavList,
+    MatListModule,
+    MatButtonModule
+  
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

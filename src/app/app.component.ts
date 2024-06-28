@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mi-proyecto-angular';
+  public sidebarItems: any[] = [
+    {
+      name: 'home',
+      url: '/home',
+      icon:'dashboard'
+    },
+    {
+      name: 'list',
+      url: '/list',
+      icon:'dashboard'
+    },
+    {
+      name: 'statistic',
+      url: '/statistic',
+      icon:'dashboard'
+    },
+  ]
 }

@@ -13,6 +13,9 @@ const routes: Routes = [{
   path: 'statistic',
   loadChildren: () => import('./statistic/statistic.module').then(m => m.StatisticModule)
 },
+{ path: '', redirectTo: '/home', pathMatch: 'full' },
+{ path: '**', redirectTo: '/home', pathMatch: 'full' },
+
 ];
 
 @NgModule({
