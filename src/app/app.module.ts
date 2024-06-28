@@ -9,12 +9,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule, MatNavList } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { StatisticsPageComponent } from './statistics/statistics-page/statistics-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    StatisticsPageComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

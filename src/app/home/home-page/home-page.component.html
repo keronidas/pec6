@@ -3,7 +3,11 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <ul class="list-group">
-                a
+                @for(item of data;track item.id){
+                <li><span>
+                        {{item.id}} - {{item.name}}
+                    </span></li>
+                }
             </ul>
         </div>
     </div>

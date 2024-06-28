@@ -5,18 +5,18 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
     {
-      path: 'home',
-      component: HomeComponent,
-      children: [
-        {
-          path: '', // Ruta hija sin prefijo, se carga cuando se navega a /home
-          component: HomePageComponent
-        }
-      ]
+        path: 'home',
+        component: HomeComponent,
+        children: [
+            {
+                path: '', 
+                component: HomePageComponent
+            }
+        ]
     },
-    { path: '**', redirectTo: 'home' } // Ruta comodín fuera del array de rutas hijas
-  ];
-  
+    { path: '**', redirectTo: 'home' } 
+];
+
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
