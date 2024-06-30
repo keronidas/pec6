@@ -1,1 +1,22 @@
-<p>statistics-page works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <app-resume-data-component></app-resume-data-component>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            @defer (on viewport) {<app-gender-component></app-gender-component>}
+            @placeholder {<p class="block mt-5">Cargando</p>}
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            @defer (on viewport) {<app-gender-results-component></app-gender-results-component>}
+            @placeholder {<p class="block mt-5">Cargando</p>}
+
+        </div>
+    </div>
+</div>

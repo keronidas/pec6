@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StatisticComponent } from './statistic.component';
+import { StatisticsPageComponent } from './statistics-page/statistics-page.component';
 
 const routes: Routes = [{
-    path: '**',
+    path: 'statistic',
     component: StatisticComponent,
+    children: [
+        {
+            path: '',
+            component: StatisticsPageComponent
+        }
+    ]
 },
+{ path: '**', redirectTo: 'statistic' }
 ];
 
 @NgModule({
