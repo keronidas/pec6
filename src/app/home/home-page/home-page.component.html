@@ -2,13 +2,33 @@
     <h2>Alumnos</h2>
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <ul class="list-group">
-                @for(item of data;track item.id){
-                <li><span>
-                        {{item.id}} - {{item.name}}
-                    </span></li>
-                }
-            </ul>
+            <div class="container mt-5">
+                <h2 class="mb-4">Resultados de Estudiantes</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Nota</th>
+                            <th>Aprobado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(item of data;track item.id){
+                        <tr>
+                            <td>{{item.name}} </td>
+                            <td>{{item.mark}}</td>
+                            <td>@if(item.mark >= 5){
+                                <span class="">Aprobado</span>
+                                }
+                                @else{
+                                <span class="">Suspenso</span>
+                                }
+                            </td>
+                        </tr>}
+                    </tbody>
+                </table>
+
+
+
+            </div>
         </div>
-    </div>
-</div>

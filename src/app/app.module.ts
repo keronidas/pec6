@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule, MatNavList } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatNavList,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   
   ],
   providers: [
